@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | Infora Tech</title>
+    <meta name="description" content="Ready to take your business to the next level? At Infora Tech, we offer a comprehensive range of mobile, web, and AI development services.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/Infora Tech Logo.png" alt="Infora Tech Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="Services.html" class="nav-link">Services</a>
+                    <div class="dropdown-content">
+                        <a href="ai-development.html">AI Development</a>
+                        <a href="mobile-app-development.html">App Development</a>
+                        <a href="web-development.html">Web Development</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="seo-sem.html">SEO & SEM</a>
+                        <a href="graphics-design.html">Graphics Design</a>
+                        <a href="video-editing.html">Video Editing</a>
+                    </div>
+                </div>
+                <a href="About-Us.html" class="nav-link">About Us</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="get-started.html" class="nav-link cta-button active">Contact Us</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="get-started-hero">
+        <div class="container">
+            <h1 class="get-started-title">
+                Ready to take your business to the next level?
+            </h1>
+            <p class="get-started-description">
+                At <strong>Infora Tech</strong>, we offer a comprehensive range of mobile, web, and AI development services designed to help you achieve your digital goals. Whether you're looking to create a custom mobile app, develop a responsive website, or leverage the power of AI, our team of experts is here to guide you every step of the way.
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Requirements Form -->
+    <section class="project-form-section">
+        <div class="container">
+            <h2 class="section-title">Project Requirements</h2>
+            <p class="section-description">Tell us about your project and get an instant estimate</p>
+            
+            <div class="form-container">
+                <form id="project-form" class="project-form">
+                    <div class="form-step active" id="step-1">
+                        <h3>1. Project Details</h3>
+                        
+                        <div class="form-group">
+                            <label for="project-type">Project Type *</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">Search or select project type...</option>
+                                <option value="website">Website Development</option>
+                                <option value="ecommerce">E-commerce Website</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="web-app">Web Application</option>
+                                <option value="ai-solution">AI Solution</option>
+                                <option value="logo-design">Logo Design</option>
+                                <option value="seo">SEO Services</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="features-level">Features Level *</label>
+                            <select id="features-level" name="features-level" required>
+                                <option value="">Search or select features level...</option>
+                                <option value="basic">Basic - Simple functionality</option>
+                                <option value="standard">Standard - Moderate features</option>
+                                <option value="advanced">Advanced - Complex features</option>
+                                <option value="enterprise">Enterprise - Full-scale solution</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-description">Project Description</label>
+                            <textarea id="project-description" name="project-description" rows="4" placeholder="Tell us more about your project requirements..."></textarea>
+                        </div>
+
+                        <button type="button" class="form-btn next-btn" onclick="nextStep()">Next</button>
+                    </div>
+
+                    <div class="form-step" id="step-2">
+                        <h3>2. Contact Info</h3>
+                        
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="full-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="form-btn back-btn" onclick="prevStep()">Back</button>
+                            <button type="submit" class="form-btn submit-btn">Submit Project</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="project-estimate">
+                    <h3>Project Estimate</h3>
+                    <p>Based on your project requirements</p>
+                    
+                    <div class="estimate-details">
+                        <div class="estimate-item">
+                            <h4>Estimated Price</h4>
+                            <div class="estimate-value" id="estimated-price">LKR 0</div>
+                        </div>
+                        <div class="estimate-item">
+                            <h4>Estimated Duration</h4>
+                            <div class="estimate-value" id="estimated-duration">0 weeks</div>
+                        </div>
+                    </div>
+                    
+                    <p class="estimate-note">* This is an initial estimate. Final pricing may vary based on specific requirements.</p>
+                    <p class="estimate-description">We understand that every project is unique. Let's discuss your specific needs and explore flexible pricing options that align with your budget while ensuring the highest quality delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Expertise and Experience</h3>
+                    <p>Our team has years of experience in the industry, ensuring you receive top-quality services tailored to your needs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Customized Solutions</h3>
+                    <p>We understand that every business is unique. We offer solutions that are specifically designed to meet your business objectives.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Affordable Services</h3>
+                    <p>Our competitive pricing ensures you get the best value for your investment.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Reliable Support</h3>
+                    <p>Our commitment to your success doesn't end with the project. We provide ongoing support and maintenance to keep your digital assets performing at their best.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Get Started -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">How to Get Started</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Contact Us</h3>
+                    <p>Reach out to us via email hello@flexorlabs.com or call us at +94766881010 to schedule a consultation.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Consultation</h3>
+                    <p>During our initial consultation, we'll discuss your business needs and objectives to determine the best solutions for you.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Proposal</h3>
+                    <p>Based on our discussion, we'll create a detailed proposal outlining the project scope, timeline, and pricing.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Agreement</h3>
+                    <p>Once you're satisfied with the proposal, we'll formalize our agreement and start working on your project.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Development and Launch</h3>
+                    <p>Our team will develop your mobile app, website, or AI solution using the latest technologies. We'll keep you updated throughout the process and ensure everything is tested and optimized before launch.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h3>Ongoing Support</h3>
+                    <p>After launch, we provide ongoing support and maintenance to ensure your digital assets continue to perform optimally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <a href="mobile-app-development.html" class="service-overview-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Apps Development</h3>
+                    <p>Create custom mobile apps that are user-friendly, feature-rich, and designed to boost your business growth.</p>
+                </a>
+
+                <a href="web-development.html" class="service-overview-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Websites & Web App Development</h3>
+                    <p>Develop responsive and visually appealing websites that drive results. Our services include e-commerce solutions, CMS development, and more.</p>
+                </a>
+
+                <a href="ai-development.html" class="service-overview-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Tools & AI Apps Development</h3>
+                    <p>Enhance your business processes with AI applications, bots, and analytics solutions.</p>
+                </a>
+
+                <a href="hosting.html" class="service-overview-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Hosting, Domain SSL Services</h3>
+                    <p>Reliable hosting solutions with domain registration and SSL certificates for your online presence.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Ready to transform your digital presence?</h2>
+                <p>Contact us today to learn more about our services and how we can help your business grow.</p>
+                <a href="mailto:hello@flexorlabs.com" class="final-cta-btn">Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/Infora Tech Logo.png" alt="Infora Tech" class="footer-logo">
+                    <p>We <strong>Infora Tech,</strong> Transform your digital presence with our expert web and app development services in Sri Lanka.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="ai-development.html">AI Development</a></li>
+                        <li><a href="mobile-app-development.html">App Development</a></li>
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="hosting.html">Web Hosting & Domain Registration</a></li>
+                        <li><a href="ecommerce.html">Ecommerce website development</a></li>
+                        <li><a href="logo-design.html">Logo Design / Tracing</a></li>
+                        <li><a href="seo.html">Search Engine Optimization (SEO)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Who we are</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Social</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Infora Tech.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="get-started.js"></script>
+</body>
+</html>

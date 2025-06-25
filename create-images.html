@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Image Placeholders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #2196f3;
+        }
+        .image-placeholder {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        .placeholder-svg {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .download-btn {
+            background: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .download-btn:hover {
+            background: #0056b3;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Placeholders for App Dev Clone</h1>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p>1. Right-click on each SVG image below and select "Save image as..."</p>
+            <p>2. Create an "images" folder in your project directory</p>
+            <p>3. Create a "clients_images" folder inside the "images" folder</p>
+            <p>4. Save the images with the exact names shown below</p>
+            <p>5. Replace these placeholders with actual images when available</p>
+        </div>
+
+        <div class="grid">
+            <!-- Logo -->
+            <div class="image-placeholder">
+                <svg class="placeholder-svg" width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="60" fill="#007bff"/>
+                    <text x="100" y="35" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">APP DEV</text>
+                </svg>
+                <br>
+                <span>logo.png</span>
+            </div>
+
+            <!-- App Store Button -->
+            <div class="image-placeholder">
+                <svg class="placeholder-svg" width="150" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="150" height="50" fill="#000" rx="8"/>
+                    <text x="75" y="30" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">App Store</text>
+                </svg>
+                <br>
+                <span>app_store.png</span>
+            </div>
+
+            <!-- Play Store Button -->
+            <div class="image-placeholder">
+                <svg class="placeholder-svg" width="150" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="150" height="50" fill="#01875f" rx="8"/>
+                    <text x="75" y="30" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Google Play</text>
+                </svg>
+                <br>
+                <span>play_store.png</span>
+            </div>
+
+            <!-- TechCrunch Feature -->
+            <div class="image-placeholder">
+                <svg class="placeholder-svg" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="300" height="200" fill="#00d084"/>
+                    <text x="150" y="90" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">TECHCRUNCH</text>
+                    <text x="150" y="120" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">FEATURED</text>
+                </svg>
+                <br>
+                <span>lyrak_tech_crunch.png</span>
+            </div>
+
+            <!-- Client Avatar 1 -->
+            <div class="image-placeholder">
+                <svg class="placeholder-svg" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="40" fill="#6c757d"/>
+                    <text x="40" y="48" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">SNGP</text>
+                </svg>
+                <br>
+                <span>clients_images/sngp.png</span>
+            </div>
+
+            <!-- Client Avatar 2 -->
+            <div class="image-placeholder">
+                <svg class="placeholder-svg" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="40" fill="#28a745"/>
+                    <text x="40" y="48" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">PRUN</text>
+                </svg>
+                <br>
+                <span>clients_images/prun.png</span>
+            </div>
+
+            <!-- Client Avatar 3 -->
+            <div class="image-placeholder">
+                <svg class="placeholder-svg" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="40" fill="#dc3545"/>
+                    <text x="40" y="48" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">BASK</text>
+                </svg>
+                <br>
+                <span>clients_images/baskaran.png</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107;">
+            <h3>Alternative: Create Images Folder Structure</h3>
+            <p>If you prefer to create the folder structure manually:</p>
+            <ol>
+                <li>Create a folder named "images" in your project root</li>
+                <li>Inside "images", create a folder named "clients_images"</li>
+                <li>Add your actual images with the names listed above</li>
+                <li>The website will automatically load them</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Add download functionality for SVGs
+        document.querySelectorAll('.placeholder-svg').forEach((svg, index) => {
+            const names = ['logo.png', 'app_store.png', 'play_store.png', 'lyrak_tech_crunch.png', 'sngp.png', 'prun.png', 'baskaran.png'];
+            
+            svg.addEventListener('click', function() {
+                const svgData = new XMLSerializer().serializeToString(this);
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const img = new Image();
+                
+                img.onload = function() {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                    
+                    canvas.toBlob(function(blob) {
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = names[index] || 'placeholder.png';
+                        a.click();
+                        URL.revokeObjectURL(url);
+                    });
+                };
+                
+                img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
+            });
+        });
+    </script>
+</body>
+</html>
