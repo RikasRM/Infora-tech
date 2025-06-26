@@ -102,10 +102,6 @@ To complete the website, create an `images` folder and add these images:
 - `Infora Tech Logo.png` - Company logo
 - `app_store.png` - App Store download button
 - `play_store.png` - Google Play Store download button
-- `lyrak_tech_crunch.png` - TechCrunch feature image
-- `app_dev_sri_lanka_ai_development.jpg` - AI development hero image
-- `app_dev_sri_lanka_mobile_app_development_.webp` - Mobile app hero image
-- `app_dev_sri_lanka_web_development_image.webp` - Web development hero image
 
 ### Client Images (in `images/clients_images/` folder)
 - `sngp.png` - SNGP Sri Lanka logo
