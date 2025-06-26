@@ -1,6 +1,6 @@
 # Infora Tech - Complete Website Clone
 
-This is a comprehensive clone of the App Dev Sri Lanka website (https://www.app-dev.lk/) created with HTML, CSS, and JavaScript, now rebranded as Infora Tech.
+This is a comprehensive clone of the Infora Tech website (https://inforatech.lk/) created with HTML, CSS, and JavaScript, now rebranded as Infora Tech.
 
 ## 🎉 COMPLETE PROJECT STRUCTURE
 
@@ -21,10 +21,6 @@ This is a comprehensive clone of the App Dev Sri Lanka website (https://www.app-
     ├── Infora Tech Logo.png
     ├── app_store.png
     ├── play_store.png
-    ├── lyrak_tech_crunch.png
-    ├── app_dev_sri_lanka_ai_development.jpg
-    ├── app_dev_sri_lanka_mobile_app_development_.webp
-    ├── app_dev_sri_lanka_web_development_image.webp
     └── clients_images/
         ├── sngp.png
         ├── prun.png
@@ -195,4 +191,4 @@ This is a static HTML/CSS/JS implementation. For a production website, consider:
 - Adding analytics tracking
 - Setting up proper hosting and domain
 
-The current implementation closely matches the original design and functionality of the App Dev Sri Lanka website.
+The current implementation closely matches the original design and functionality of the Infora Tech website.
