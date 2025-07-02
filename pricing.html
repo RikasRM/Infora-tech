@@ -8,6 +8,435 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Pricing Page Styling -->
+    <style>
+        /* Enhanced Hero Section with Brand Colors */
+        .pricing-hero {
+            background: linear-gradient(135deg, #01295c 25%, #4a088e 100%);
+            color: white;
+            padding: 180px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .pricing-hero-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing-hero-description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Enhanced Pricing Sections */
+        .pricing-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            position: relative;
+            padding: 120px 0;
+        }
+        
+        .pricing-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(1,41,92,0.05)"/></svg>') repeat;
+            opacity: 0.4;
+        }
+        
+        .ecommerce-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+        }
+        
+        /* Enhanced Pricing Cards */
+        .pricing-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid rgba(1, 41, 92, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(1, 41, 92, 0.1);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-align: left;
+        }
+        
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #01295c 0%, #8b5cf6 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(1, 41, 92, 0.2);
+            border-color: #01295c;
+        }
+        
+        /* Featured Card Special Styling */
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+            color: white;
+            border: 2px solid #8b5cf6;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            background: linear-gradient(90deg, #ffffff 0%, #f8fafc 100%);
+            height: 5px;
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow: 0 30px 60px rgba(1, 41, 92, 0.3);
+        }
+        
+        .pricing-card.featured .pricing-header h3,
+        .pricing-card.featured .price,
+        .pricing-card.featured .price-description {
+            color: white;
+        }
+        
+        .pricing-card.featured .pricing-features h4 {
+            color: #f8fafc;
+        }
+        
+        .pricing-card.featured .pricing-features li {
+            color: #e2e8f0;
+        }
+        
+        .pricing-card.featured .pricing-features i {
+            color: #34d399;
+        }
+        
+        /* Popular Badge */
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+        }
+        
+        /* Pricing Header */
+        .pricing-header {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 2rem;
+            flex-grow: 0;
+        }
+        
+        .pricing-header h3 {
+            color: #01295c;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            min-height: 3.9rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .price {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+        
+        .price .currency {
+            font-size: 1.2rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .price .amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #01295c;
+            line-height: 1;
+        }
+        
+        .pricing-card.featured .price .currency,
+        .pricing-card.featured .price .amount {
+            color: white;
+        }
+        
+        .price-description {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        /* Pricing Features */
+        .pricing-features {
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features h4 {
+            color: #01295c;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .pricing-features li {
+            color: #4b5563;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+            gap: 0.75rem;
+        }
+        
+        .pricing-features li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .pricing-features i {
+            color: #10b981;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+        
+        /* Pricing Buttons */
+        .pricing-btn {
+            background: linear-gradient(135deg, #01295c 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(1, 41, 92, 0.2);
+            margin-top: auto;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .pricing-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(1, 41, 92, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .featured-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .featured-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Section Titles */
+        .section-title {
+            position: relative;
+            color: #01295c;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #01295c 0%, #8b5cf6 100%);
+            border-radius: 2px;
+        }
+        
+        /* Enhanced Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0;
+        }
+        
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .final-cta-content h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        
+        .final-cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .final-cta-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .final-cta-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 1;
+            align-items: stretch;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pricing-hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .pricing-card {
+                padding: 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .pricing-header h3 {
+                min-height: auto;
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .pricing-card {
+                padding: 1.5rem;
+            }
+            
+            .price .amount {
+                font-size: 2rem;
+            }
+            
+            .pricing-grid {
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -69,7 +498,7 @@
                         <h3>Basic Business Website</h3>
                         <div class="price">
                             <span class="currency">LKR</span>
-                            <span class="amount">35,000+</span>
+                            <span class="amount">30,000+</span>
                         </div>
                         <p class="price-description">A simple starting point for businesses just beginning their online journey.</p>
                     </div>
@@ -116,7 +545,7 @@
                         <h3>Premium Business Website</h3>
                         <div class="price">
                             <span class="currency">LKR</span>
-                            <span class="amount">85,000+</span>
+                            <span class="amount">100,000+</span>
                         </div>
                         <p class="price-description">Transform your business with our flagship solution that delivers exceptional ROI and unmatched competitive advantage.</p>
                     </div>
@@ -146,7 +575,7 @@
                         <h3>Starter E-commerce Website</h3>
                         <div class="price">
                             <span class="currency">LKR</span>
-                            <span class="amount">95,000+</span>
+                            <span class="amount">100,000+</span>
                         </div>
                         <p class="price-description">Launch your online store quickly with our starter e-commerce package. Perfect for small to medium-sized businesses entering the online market.</p>
                     </div>
@@ -169,7 +598,7 @@
                         <h3>Advanced E-commerce Website</h3>
                         <div class="price">
                             <span class="currency">LKR</span>
-                            <span class="amount">155,000+</span>
+                            <span class="amount">165,000+</span>
                         </div>
                         <p class="price-description">Scale your online business with our advanced e-commerce solution. Ideal for growing businesses looking for more features and customization.</p>
                     </div>
@@ -193,7 +622,7 @@
                         <h3>Enterprise E-commerce Solution</h3>
                         <div class="price">
                             <span class="currency">LKR</span>
-                            <span class="amount">195,000+</span>
+                            <span class="amount">200,000+</span>
                         </div>
                         <p class="price-description">A fully customized e-commerce platform for large businesses and enterprises. Tailored to your specific needs with advanced features and integrations.</p>
                     </div>
@@ -248,8 +677,8 @@
                     <h3>Company</h3>
                     <ul>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">Who we are</a></li>
-                        <li><a href="about.html">About us</a></li>
+                        <li><a href="About-Us.html">Who we are</a></li>
+                        <li><a href="About-Us.html">About us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="contact.html">Contact us</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
