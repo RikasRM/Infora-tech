@@ -1163,3 +1163,717 @@ textarea:focus {
     background: #01295c;
     color: white;
 }
+
+/* Get Started Page Styles */
+.get-started-hero {
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.get-started-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="grad1" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23grad1)"/><circle cx="800" cy="300" r="150" fill="url(%23grad1)"/><circle cx="400" cy="700" r="120" fill="url(%23grad1)"/></svg>') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.get-started-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.get-started-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+    font-weight: 400;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+}
+
+/* Project Form Section */
+.project-form-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+}
+
+.project-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(1, 41, 92, 0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.5;
+}
+
+.project-form-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+/* Project Form Styles */
+.project-form {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(1, 41, 92, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.project-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #01295c 0%, #4a088e 50%, #01295c 100%);
+}
+
+.form-step {
+    padding: 3rem;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-step h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #01295c;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-step h3::before {
+    content: '';
+    width: 40px;
+    height: 4px;
+    background: linear-gradient(90deg, #01295c, #4a088e);
+    border-radius: 2px;
+    margin-right: 1rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #01295c;
+    box-shadow: 0 0 0 3px rgba(1, 41, 92, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group select {
+    cursor: pointer;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23374151" d="M6 8L0 2h12z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    appearance: none;
+}
+
+/* Form Buttons */
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.form-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.next-btn,
+.submit-btn {
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    color: white;
+    box-shadow: 0 8px 25px rgba(1, 41, 92, 0.3);
+}
+
+.next-btn:hover,
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(1, 41, 92, 0.4);
+}
+
+.back-btn {
+    background: #f8fafc;
+    color: #374151;
+    border: 2px solid #e5e7eb;
+}
+
+.back-btn:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.form-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.form-btn:hover::before {
+    left: 100%;
+}
+
+/* Project Estimate Card */
+.project-estimate {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(1, 41, 92, 0.1);
+    position: sticky;
+    top: 2rem;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #01295c, #4a088e);
+    background-origin: border-box;
+}
+
+.project-estimate h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #01295c;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.project-estimate > p {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.estimate-details {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.estimate-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 15px;
+    border: 1px solid rgba(1, 41, 92, 0.1);
+}
+
+.estimate-item h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.estimate-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.estimate-note {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.estimate-description {
+    font-size: 0.9rem;
+    color: #6b7280;
+    text-align: center;
+    line-height: 1.6;
+    padding: 1.5rem;
+    background: rgba(1, 41, 92, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #01295c;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 100px 0;
+    background: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.feature-card:hover::before {
+    opacity: 0.05;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(1, 41, 92, 0.15);
+    border-color: rgba(1, 41, 92, 0.2);
+}
+
+.feature-icon {
+    position: relative;
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(1, 41, 92, 0.3);
+}
+
+.feature-card h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #01295c;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    position: relative;
+    z-index: 2;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* Process Section */
+.process-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.process-step {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(1, 41, 92, 0.08);
+    text-align: center;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(1, 41, 92, 0.15);
+    border-color: rgba(1, 41, 92, 0.2);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 25px rgba(1, 41, 92, 0.3);
+}
+
+.process-step h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #01295c;
+    margin-bottom: 1rem;
+}
+
+.process-step p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* Services Overview */
+.services-overview {
+    padding: 100px 0;
+    background: white;
+}
+
+.service-overview-card {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-overview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.service-overview-card:hover::before {
+    opacity: 0.05;
+}
+
+.service-overview-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(1, 41, 92, 0.15);
+    border-color: rgba(1, 41, 92, 0.2);
+    text-decoration: none;
+}
+
+.service-overview-card .service-icon {
+    position: relative;
+    z-index: 2;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 25px rgba(1, 41, 92, 0.3);
+}
+
+.service-overview-card h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #01295c;
+    margin-bottom: 1rem;
+}
+
+.service-overview-card p {
+    position: relative;
+    z-index: 2;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* Final CTA Section */
+.final-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="grad2" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23grad2)"/><circle cx="800" cy="300" r="150" fill="url(%23grad2)"/></svg>') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.final-cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-cta-btn {
+    display: inline-block;
+    background: white;
+    color: #01295c;
+    padding: 1.25rem 2.5rem;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.final-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    background: #f8fafc;
+    color: #01295c;
+    text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design for Get Started Page */
+@media (max-width: 1024px) {
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .project-estimate {
+        position: static;
+    }
+    
+    .get-started-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .get-started-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .get-started-title {
+        font-size: 2.2rem;
+    }
+    
+    .get-started-description {
+        font-size: 1.1rem;
+    }
+    
+    .project-form-section {
+        padding: 80px 0;
+    }
+    
+    .form-step {
+        padding: 2rem;
+    }
+    
+    .form-step h3 {
+        font-size: 1.5rem;
+    }
+    
+    .project-estimate {
+        padding: 2rem;
+    }
+    
+    .features-grid,
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .final-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .form-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .get-started-title {
+        font-size: 1.8rem;
+    }
+    
+    .form-step {
+        padding: 1.5rem;
+    }
+    
+    .project-estimate {
+        padding: 1.5rem;
+    }
+    
+    .feature-card,
+    .process-step,
+    .service-overview-card {
+        padding: 2rem 1.5rem;
+    }
+}

@@ -53,45 +53,45 @@ function validateCurrentStep() {
 // Project estimation logic
 const projectPricing = {
     'website': {
-        'basic': { price: 35000, duration: 2 },
+        'basic': { price: 30000, duration: 2 },
         'standard': { price: 55000, duration: 3 },
-        'advanced': { price: 85000, duration: 4 },
-        'enterprise': { price: 120000, duration: 6 }
+        'advanced': { price: 100000, duration: 4 },
+        'enterprise': { price: 150000, duration: 6 }
     },
     'ecommerce': {
-        'basic': { price: 95000, duration: 4 },
-        'standard': { price: 155000, duration: 6 },
-        'advanced': { price: 195000, duration: 8 },
-        'enterprise': { price: 300000, duration: 12 }
+        'basic': { price: 100000, duration: 4 },
+        'standard': { price: 165000, duration: 6 },
+        'advanced': { price: 200000, duration: 8 },
+        'enterprise': { price: 350000, duration: 12 }
     },
     'mobile-app': {
         'basic': { price: 150000, duration: 8 },
-        'standard': { price: 250000, duration: 12 },
-        'advanced': { price: 400000, duration: 16 },
+        'standard': { price: 300000, duration: 12 },
+        'advanced': { price: 450000, duration: 16 },
         'enterprise': { price: 600000, duration: 24 }
     },
     'web-app': {
-        'basic': { price: 120000, duration: 6 },
-        'standard': { price: 200000, duration: 10 },
+        'basic': { price: 150000, duration: 6 },
+        'standard': { price: 250000, duration: 10 },
         'advanced': { price: 350000, duration: 14 },
-        'enterprise': { price: 500000, duration: 20 }
+        'enterprise': { price: 550000, duration: 20 }
     },
     'ai-solution': {
-        'basic': { price: 100000, duration: 6 },
-        'standard': { price: 200000, duration: 10 },
-        'advanced': { price: 400000, duration: 16 },
-        'enterprise': { price: 800000, duration: 24 }
+        'basic': { price: 150000, duration: 6 },
+        'standard': { price: 250000, duration: 10 },
+        'advanced': { price: 450000, duration: 16 },
+        'enterprise': { price: 880000, duration: 24 }
     },
     'logo-design': {
-        'basic': { price: 15000, duration: 1 },
-        'standard': { price: 25000, duration: 1 },
+        'basic': { price: 10000, duration: 1 },
+        'standard': { price: 28000, duration: 1 },
         'advanced': { price: 40000, duration: 2 },
-        'enterprise': { price: 60000, duration: 2 }
+        'enterprise': { price: 70000, duration: 2 }
     },
     'seo': {
-        'basic': { price: 25000, duration: 4 },
-        'standard': { price: 50000, duration: 8 },
-        'advanced': { price: 100000, duration: 12 },
+        'basic': { price: 45000, duration: 4 },
+        'standard': { price: 70000, duration: 8 },
+        'advanced': { price: 140000, duration: 12 },
         'enterprise': { price: 200000, duration: 16 }
     }
 };
@@ -160,8 +160,8 @@ function showSuccessMessage() {
             <p>Your project request has been submitted successfully. We'll get back to you within 24 hours with a detailed proposal.</p>
             <div class="contact-info">
                 <p><strong>Need immediate assistance?</strong></p>
-                <p>Email: <a href="mailto:hello@flexorlabs.com">hello@flexorlabs.com</a></p>
-                <p>Phone: <a href="tel:+94766881010">+94 76 688 1010</a></p>
+                <p>Email: <a href="mailto:info@inforatech.io">info@inforatech.io</a></p>
+                <p>Phone: <a href="tel:+94752231014">+94 75 223 1014</a></p>
             </div>
             <a href="index.html" class="back-home-btn">Back to Home</a>
         </div>
