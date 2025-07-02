@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Page 2 | Infora Tech - Latest Web Development & Tech Insights</title>
+    <meta name="description" content="Continue reading the latest trends in web development, AI technology, digital marketing, and business growth strategies from Infora Tech experts.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Include the same blog styling from main blog page -->
+    <style>
+        /* Enhanced Blog Hero Section */
+        .blog-hero {
+            background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="blogGrid" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M 12 0 L 0 0 0 12" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23blogGrid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .blog-hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .blog-hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+            line-height: 1.7;
+        }
+        
+        /* Enhanced Blog Main Section */
+        .blog-main {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0;
+            position: relative;
+        }
+        
+        .blog-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="1.5" fill="rgba(1,41,92,0.04)"/><circle cx="75" cy="75" r="1.5" fill="rgba(139,92,246,0.04)"/></svg>') repeat;
+            opacity: 0.6;
+        }
+        
+        .blog-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Blog Posts Grid */
+        .blog-posts {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .blog-post {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid rgba(1, 41, 92, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(1, 41, 92, 0.08);
+            position: relative;
+        }
+        
+        .blog-post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #01295c 0%, #8b5cf6 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-post:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(1, 41, 92, 0.12);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+        
+        .post-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .post-content {
+            padding: 1.5rem;
+        }
+        
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+        
+        .post-title {
+            color: #01295c;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .post-excerpt {
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .post-link {
+            color: #8b5cf6;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .post-link:hover {
+            color: #01295c;
+            text-decoration: none;
+        }
+        
+        .article-category {
+            background: linear-gradient(135deg, #01295c 0%, #8b5cf6 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .article-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Sidebar styles - copied from main blog page */
+        .blog-sidebar {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sidebar-widget {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid rgba(1, 41, 92, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(1, 41, 92, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-widget:hover {
+            box-shadow: 0 15px 40px rgba(1, 41, 92, 0.12);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+        
+        .widget-title {
+            color: #01295c;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .widget-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #01295c 0%, #8b5cf6 100%);
+            border-radius: 2px;
+        }
+        
+        /* Categories Widget */
+        .categories-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .categories-list li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .categories-list a {
+            color: #4b5563;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(1, 41, 92, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .categories-list a:hover {
+            color: #01295c;
+            text-decoration: none;
+            padding-left: 0.5rem;
+        }
+        
+        .category-count {
+            background: linear-gradient(135deg, #8b5cf6 0%, #01295c 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        /* Newsletter Widget */
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .newsletter-input {
+            padding: 12px 16px;
+            border: 2px solid rgba(1, 41, 92, 0.1);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+        
+        .newsletter-btn {
+            background: linear-gradient(135deg, #01295c 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(1, 41, 92, 0.2);
+        }
+        
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(1, 41, 92, 0.3);
+        }
+        
+        /* Pagination */
+        .blog-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 4rem;
+            grid-column: 1 / -1;
+        }
+        
+        .pagination-btn {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid rgba(1, 41, 92, 0.1);
+            color: #01295c;
+            padding: 10px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .pagination-btn:hover {
+            background: linear-gradient(135deg, #01295c 0%, #8b5cf6 100%);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(1, 41, 92, 0.2);
+        }
+        
+        .pagination-btn.active {
+            background: linear-gradient(135deg, #01295c 0%, #8b5cf6 100%);
+            color: white;
+            border-color: #8b5cf6;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .blog-sidebar {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero-title {
+                font-size: 2rem;
+            }
+            
+            .blog-hero-description {
+                font-size: 1rem;
+            }
+            
+            .blog-main {
+                padding: 80px 0;
+            }
+            
+            .post-content {
+                padding: 1.25rem;
+            }
+            
+            .sidebar-widget {
+                padding: 1.5rem;
+            }
+            
+            .blog-pagination {
+                margin-top: 3rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/Infora Tech Logo.png" alt="Infora Tech Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="Services.html" class="nav-link">Services</a>
+                    <div class="dropdown-content">
+                        <a href="ai-development.html">AI Development</a>
+                        <a href="mobile-app-development.html">App Development</a>
+                        <a href="web-development.html">Web Development</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="seo-sem.html">SEO & SEM</a>
+                        <a href="graphics-design.html">Graphics Design</a>
+                        <a href="video-editing.html">Video Editing</a>
+                    </div>
+                </div>
+                <a href="About-Us.html" class="nav-link">About Us</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="get-started.html" class="nav-link cta-button">Contact Us</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 class="blog-hero-title">
+                More Tech Insights & Digital Marketing Tips
+            </h1>
+            <p class="blog-hero-description">
+                Continue exploring our latest articles on web development, technology trends, and business growth strategies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Main Content -->
+    <section class="blog-main">
+        <div class="container">
+            <div class="blog-container">
+                <!-- Main Content -->
+                <main class="blog-content">
+                    <!-- Blog Posts Grid -->
+                    <div class="blog-posts">
+                        <!-- Post 1 -->
+                        <article class="blog-post">
+                            <img src="https://via.placeholder.com/400x200/01295c/ffffff?text=Web+Performance" alt="Website Performance" class="post-image">
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="article-category">Performance</span>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        December 3, 2024
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Website Speed Optimization: Boost Your Site Performance by 200%</h3>
+                                <p class="post-excerpt">
+                                    Website speed directly impacts user experience, search engine rankings, and conversion rates. Learn proven techniques to optimize your website's loading speed and improve overall performance metrics with our comprehensive guide.
+                                </p>
+                                <a href="#" class="post-link">
+                                    Read More
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Post 2 -->
+                        <article class="blog-post">
+                            <img src="https://via.placeholder.com/400x200/dc2626/ffffff?text=Social+Media+Marketing" alt="Social Media Marketing" class="post-image">
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="article-category">Social Media</span>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        December 1, 2024
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Social Media Marketing Strategies That Actually Work in 2024</h3>
+                                <p class="post-excerpt">
+                                    Social media marketing continues to evolve with new platforms, algorithms, and user behaviors. Discover effective strategies for Facebook, Instagram, LinkedIn, and TikTok that drive real business results and engagement.
+                                </p>
+                                <a href="#" class="post-link">
+                                    Read More
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Post 3 -->
+                        <article class="blog-post">
+                            <img src="https://via.placeholder.com/400x200/f59e0b/ffffff?text=Digital+Transformation" alt="Digital Transformation" class="post-image">
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="article-category">Business Growth</span>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        November 28, 2024
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Digital Transformation: How Small Businesses Can Compete with Giants</h3>
+                                <p class="post-excerpt">
+                                    Digital transformation isn't just for large corporations. Small and medium businesses can leverage technology to compete effectively, streamline operations, and reach new customers. Learn practical steps to digitize your business.
+                                </p>
+                                <a href="#" class="post-link">
+                                    Read More
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Post 4 -->
+                        <article class="blog-post">
+                            <img src="https://via.placeholder.com/400x200/8b5cf6/ffffff?text=WordPress+Security" alt="WordPress Security" class="post-image">
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="article-category">Web Development</span>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        November 25, 2024
+                                    </div>
+                                </div>
+                                <h3 class="post-title">WordPress Security: Protect Your Website from Hackers in 2024</h3>
+                                <p class="post-excerpt">
+                                    WordPress powers 43% of all websites, making it a prime target for hackers. Learn essential security measures, plugins, and best practices to protect your WordPress site from malware, brute force attacks, and data breaches.
+                                </p>
+                                <a href="#" class="post-link">
+                                    Read More
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Post 5 -->
+                        <article class="blog-post">
+                            <img src="https://via.placeholder.com/400x200/10b981/ffffff?text=Google+Ads+vs+Facebook" alt="Google Ads vs Facebook Ads" class="post-image">
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="article-category">Digital Marketing</span>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        November 22, 2024
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Google Ads vs Facebook Ads: Which Platform Delivers Better ROI?</h3>
+                                <p class="post-excerpt">
+                                    Choosing between Google Ads and Facebook Ads can be challenging. This comprehensive comparison analyzes costs, targeting options, ad formats, and performance metrics to help you decide which platform is best for your business goals.
+                                </p>
+                                <a href="#" class="post-link">
+                                    Read More
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Post 6 -->
+                        <article class="blog-post">
+                            <img src="https://via.placeholder.com/400x200/4a088e/ffffff?text=UX+Design+Principles" alt="UX Design Principles" class="post-image">
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="article-category">Design</span>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        November 20, 2024
+                                    </div>
+                                </div>
+                                <h3 class="post-title">UX Design Principles for Better User Engagement and Conversions</h3>
+                                <p class="post-excerpt">
+                                    Good UX design is invisible to users but drives significant business results. Explore fundamental UX principles, user research methods, and design strategies that improve user satisfaction and increase conversion rates.
+                                </p>
+                                <a href="#" class="post-link">
+                                    Read More
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="blog-pagination">
+                        <a href="blog.html" class="pagination-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="blog.html" class="pagination-btn">1</a>
+                        <a href="blog-page-2.html" class="pagination-btn active">2</a>
+                        <a href="#" class="pagination-btn">3</a>
+                        <span>...</span>
+                        <a href="#" class="pagination-btn">8</a>
+                        <a href="#" class="pagination-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </nav>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Search Articles</h3>
+                        <form class="search-form">
+                            <div class="search-input-group">
+                                <input type="text" placeholder="Search for articles..." class="newsletter-input">
+                                <button type="submit" class="newsletter-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">Web Development <span class="category-count">12</span></a></li>
+                            <li><a href="#">AI Development <span class="category-count">8</span></a></li>
+                            <li><a href="#">Digital Marketing <span class="category-count">15</span></a></li>
+                            <li><a href="#">E-commerce <span class="category-count">10</span></a></li>
+                            <li><a href="#">Mobile Apps <span class="category-count">6</span></a></li>
+                            <li><a href="#">SEO & SEM <span class="category-count">9</span></a></li>
+                            <li><a href="#">Business Growth <span class="category-count">7</span></a></li>
+                            <li><a href="#">Tech Trends <span class="category-count">11</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Stay Updated</h3>
+                        <p style="color: #6b7280; margin-bottom: 1.5rem; font-size: 0.95rem;">
+                            Get the latest web development tips, AI insights, and digital marketing strategies delivered directly to your inbox.
+                        </p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                            <button type="submit" class="newsletter-btn">
+                                Subscribe Now
+                                <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i>
+                            </button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html">
+                        <img src="images/Infora Tech Logo.png" alt="Infora Tech" class="footer-logo">
+                    </a>
+                    <p>We <strong>Infora Tech,</strong> Transform your digital presence with our expert web and app development services across the globe. Elevate your business with our innovative solutions. Let's collaborate and make your digital dreams come true!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="ai-development.html">AI Development</a></li>
+                        <li><a href="mobile-app-development.html">App Development</a></li>
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="hosting.html">Web Hosting & Domain Registration</a></li>
+                        <li><a href="ecommerce.html">Ecommerce website development</a></li>
+                        <li><a href="logo-design.html">Logo Design / Tracing</a></li>
+                        <li><a href="seo.html">Search Engine Optimization (SEO)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Who we are</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="pricing.html">Services</a></li>
+                        <li><a href="get-started.html">Contact us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Social</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <a href="index.html">Infora Tech</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+    <script>
+        // Newsletter subscription
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('Thank you for subscribing! We\'ll keep you updated with the latest tech insights.');
+                this.reset();
+            }
+        });
+
+        // Search functionality
+        document.querySelector('.search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = this.querySelector('input').value;
+            if (query) {
+                alert(`Searching for: "${query}"\nSearch functionality will be implemented in the full version.`);
+            }
+        });
+    </script>
+</body>
+</html>

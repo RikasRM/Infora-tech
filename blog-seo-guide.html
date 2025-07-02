@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete SEO Guide: Rank Higher on Google in 30 Days | Infora Tech Blog</title>
+    <meta name="description" content="Master SEO with our comprehensive guide. Learn keyword research, on-page optimization, technical SEO, and content strategies to rank higher on Google.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .blog-article {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0;
+        }
+        
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(1, 41, 92, 0.1);
+            overflow: hidden;
+        }
+        
+        .article-header {
+            position: relative;
+        }
+        
+        .article-hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .article-body {
+            padding: 3rem;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        .article-category {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .article-title {
+            color: #01295c;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .article-content {
+            color: #4b5563;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            color: #01295c;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .article-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+            border-radius: 2px;
+        }
+        
+        .article-content h3 {
+            color: #01295c;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-content blockquote {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 4px solid #10b981;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            color: #374151;
+        }
+        
+        .back-to-blog {
+            background: linear-gradient(135deg, #01295c 0%, #8b5cf6 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-blog:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(1, 41, 92, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .article-body {
+                padding: 2rem;
+            }
+            
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .article-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/Infora Tech Logo.png" alt="Infora Tech Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="Services.html" class="nav-link">Services</a>
+                    <div class="dropdown-content">
+                        <a href="ai-development.html">AI Development</a>
+                        <a href="mobile-app-development.html">App Development</a>
+                        <a href="web-development.html">Web Development</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="seo-sem.html">SEO & SEM</a>
+                        <a href="graphics-design.html">Graphics Design</a>
+                        <a href="video-editing.html">Video Editing</a>
+                    </div>
+                </div>
+                <a href="About-Us.html" class="nav-link">About Us</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="get-started.html" class="nav-link cta-button">Contact Us</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <section class="blog-article">
+        <div class="container">
+            <article class="article-container">
+                <header class="article-header">
+                    <img src="https://via.placeholder.com/900x400/10b981/ffffff?text=Complete+SEO+Guide+2024" alt="SEO Guide 2024" class="article-hero-image">
+                </header>
+                
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span class="article-category">Digital Marketing</span>
+                        <div class="article-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            December 5, 2024
+                        </div>
+                        <div class="article-author">
+                            <i class="fas fa-user"></i>
+                            Infora Tech Team
+                        </div>
+                        <div class="reading-time">
+                            <i class="fas fa-clock"></i>
+                            12 min read
+                        </div>
+                    </div>
+                    
+                    <h1 class="article-title">Complete SEO Guide: Rank Higher on Google in 30 Days</h1>
+                    
+                    <div class="article-content">
+                        <p>Search Engine Optimization (SEO) remains one of the most effective ways to drive organic traffic to your website. With over 8.5 billion searches performed on Google daily, appearing on the first page of search results can transform your business. This comprehensive guide will walk you through proven strategies to improve your Google rankings within 30 days.</p>
+                        
+                        <p>Whether you're a small business owner in Colombo or an enterprise company expanding across Sri Lanka, these SEO fundamentals will help you dominate local search results and compete on a global scale.</p>
+                        
+                        <h2>Understanding SEO in 2024</h2>
+                        
+                        <p>SEO has evolved significantly over the years. Google's algorithm now considers over 200 ranking factors, but some elements carry more weight than others. The key is understanding what matters most in 2024:</p>
+                        
+                        <ul>
+                            <li><strong>User Experience (UX):</strong> Core Web Vitals and overall site usability</li>
+                            <li><strong>Content Quality:</strong> Helpful, relevant, and comprehensive content</li>
+                            <li><strong>Technical SEO:</strong> Site speed, mobile-friendliness, and crawlability</li>
+                            <li><strong>Authority:</strong> Quality backlinks and domain trust</li>
+                            <li><strong>Local Relevance:</strong> Geographic targeting and local citations</li>
+                        </ul>
+                        
+                        <blockquote>
+                            "SEO is not about gaming the system anymore. It's about learning how to play by the rules." - Jordan Teicher
+                        </blockquote>
+                        
+                        <h2>Week 1: Foundation and Keyword Research</h2>
+                        
+                        <h3>Day 1-2: SEO Audit</h3>
+                        <p>Start by understanding your current SEO performance:</p>
+                        
+                        <ol>
+                            <li><strong>Google Search Console Setup:</strong> Verify your website and review current data</li>
+                            <li><strong>Site Speed Analysis:</strong> Use PageSpeed Insights to identify performance issues</li>
+                            <li><strong>Mobile-Friendly Test:</strong> Ensure your site passes Google's mobile usability test</li>
+                            <li><strong>Current Rankings:</strong> Document your existing keyword positions</li>
+                        </ol>
+                        
+                        <h3>Day 3-5: Comprehensive Keyword Research</h3>
+                        <p>Effective keyword research forms the foundation of successful SEO:</p>
+                        
+                        <h4>Primary Keyword Research Tools:</h4>
+                        <ul>
+                            <li><strong>Google Keyword Planner:</strong> Free tool with actual search volume data</li>
+                            <li><strong>Ubersuggest:</strong> Great for finding long-tail keyword opportunities</li>
+                            <li><strong>Answer the Public:</strong> Discover question-based keywords</li>
+                            <li><strong>Google Trends:</strong> Identify seasonal trends and rising topics</li>
+                        </ul>
+                        
+                        <h4>Keyword Selection Strategy:</h4>
+                        <ol>
+                            <li><strong>High-Intent Keywords:</strong> Focus on terms that indicate buying intent</li>
+                            <li><strong>Local Keywords:</strong> Include location-based terms (e.g., "web design Colombo")</li>
+                            <li><strong>Long-Tail Keywords:</strong> Target 3-4 word phrases with lower competition</li>
+                            <li><strong>Competitive Analysis</strong> Research what keywords your competitors rank for</li>
+                        </ol>
+                        
+                        <h3>Day 6-7: Content Planning</h3>
+                        <p>Create a content strategy based on your keyword research:</p>
+                        
+                        <ul>
+                            <li>Map keywords to existing pages</li>
+                            <li>Identify content gaps in your current site</li>
+                            <li>Plan new content pieces for high-opportunity keywords</li>
+                            <li>Create a content calendar for consistent publishing</li>
+                        </ul>
+                        
+                        <h2>Week 2: On-Page Optimization</h2>
+                        
+                        <h3>Title Tag Optimization</h3>
+                        <p>Your title tag is one of the most important on-page SEO elements:</p>
+                        
+                        <ul>
+                            <li><strong>Length:</strong> Keep titles between 50-60 characters</li>
+                            <li><strong>Keyword Placement:</strong> Include primary keyword near the beginning</li>
+                            <li><strong>Brand Integration:</strong> Add your brand name at the end</li>
+                            <li><strong>Compelling Copy:</strong> Make titles click-worthy while being descriptive</li>
+                        </ul>
+                        
+                        <p><strong>Example:</strong> "Web Development Services in Colombo | Professional Websites | Infora Tech"</p>
+                        
+                        <h3>Meta Description Mastery</h3>
+                        <p>While not a direct ranking factor, meta descriptions significantly impact click-through rates:</p>
+                        
+                        <ul>
+                            <li><strong>Length:</strong> Aim for 150-160 characters</li>
+                            <li><strong>Include Keywords:</strong> Naturally incorporate target keywords</li>
+                            <li><strong>Call-to-Action:</strong> Add compelling CTAs like "Learn More" or "Get Started"</li>
+                            <li><strong>Unique Descriptions:</strong> Each page should have a unique meta description</li>
+                        </ul>
+                        
+                        <h3>Header Tag Hierarchy</h3>
+                        <p>Proper header structure helps both users and search engines understand your content:</p>
+                        
+                        <ul>
+                            <li><strong>H1 Tags:</strong> One per page, include primary keyword</li>
+                            <li><strong>H2 Tags:</strong> Section headers, include secondary keywords</li>
+                            <li><strong>H3-H6 Tags:</strong> Subsections, maintain logical hierarchy</li>
+                            <li><strong>Natural Usage:</strong> Don't force keywords, prioritize readability</li>
+                        </ul>
+                        
+                        <h3>Content Optimization</h3>
+                        <p>Create content that satisfies both users and search engines:</p>
+                        
+                        <ul>
+                            <li><strong>Keyword Density:</strong> Aim for 1-2% density, avoid keyword stuffing</li>
+                            <li><strong>Semantic Keywords:</strong> Include related terms and synonyms</li>
+                            <li><strong>Content Length:</strong> Comprehensive content typically performs better (1,500+ words for competitive terms)</li>
+                            <li><strong>Internal Linking:</strong> Link to relevant pages within your website</li>
+                            <li><strong>External Links:</strong> Link to authoritative sources when relevant</li>
+                        </ul>
+                        
+                        <h2>Week 3: Technical SEO</h2>
+                        
+                        <h3>Site Speed Optimization</h3>
+                        <p>Page speed is a confirmed ranking factor and crucial for user experience:</p>
+                        
+                        <h4>Key Speed Optimization Techniques:</h4>
+                        <ul>
+                            <li><strong>Image Optimization:</strong> Compress images and use modern formats (WebP)</li>
+                            <li><strong>Minify Code:</strong> Reduce CSS, JavaScript, and HTML file sizes</li>
+                            <li><strong>Enable Compression:</strong> Use Gzip compression for faster file transfer</li>
+                            <li><strong>Leverage Browser Caching:</strong> Set appropriate cache headers</li>
+                            <li><strong>CDN Implementation:</strong> Use Content Delivery Networks for global speed</li>
+                            <li><strong>Database Optimization:</strong> Clean up unnecessary data and optimize queries</li>
+                        </ul>
+                        
+                        <h3>Mobile Optimization</h3>
+                        <p>With mobile-first indexing, mobile optimization is non-negotiable:</p>
+                        
+                        <ul>
+                            <li><strong>Responsive Design:</strong> Ensure your site adapts to all screen sizes</li>
+                            <li><strong>Touch-Friendly Interface:</strong> Adequate button sizes and spacing</li>
+                            <li><strong>Fast Mobile Loading:</strong> Optimize for slower mobile connections</li>
+                            <li><strong>Mobile Usability:</strong> Test navigation and functionality on actual devices</li>
+                        </ul>
+                        
+                        <h3>Technical Site Structure</h3>
+                        <p>A well-structured website helps search engines crawl and index your content:</p>
+                        
+                        <ul>
+                            <li><strong>XML Sitemap:</strong> Create and submit comprehensive sitemaps</li>
+                            <li><strong>Robots.txt:</strong> Guide search engine crawlers appropriately</li>
+                            <li><strong>URL Structure:</strong> Use clean, descriptive URLs with keywords</li>
+                            <li><strong>Canonical Tags:</strong> Prevent duplicate content issues</li>
+                            <li><strong>Schema Markup:</strong> Add structured data for rich snippets</li>
+                        </ul>
+                        
+                        <h2>Week 4: Authority Building and Local SEO</h2>
+                        
+                        <h3>Link Building Strategies</h3>
+                        <p>Quality backlinks remain one of the strongest ranking signals:</p>
+                        
+                        <h4>Ethical Link Building Techniques:</h4>
+                        <ul>
+                            <li><strong>Guest Posting:</strong> Write valuable content for industry websites</li>
+                            <li><strong>Resource Page Link Building:</strong> Get listed on relevant resource pages</li>
+                            <li><strong>Broken Link Building:</strong> Help sites fix broken links by suggesting your content</li>
+                            <li><strong>Local Partnerships:</strong> Partner with local businesses for mutual link exchange</li>
+                            <li><strong>Industry Directories:</strong> Submit to reputable, niche-specific directories</li>
+                        </ul>
+                        
+                        <h3>Local SEO for Sri Lankan Businesses</h3>
+                        <p>Local SEO is crucial for businesses serving specific geographic areas:</p>
+                        
+                        <h4>Google My Business Optimization:</h4>
+                        <ul>
+                            <li><strong>Complete Profile:</strong> Fill out all business information completely</li>
+                            <li><strong>Regular Updates:</strong> Post updates, photos, and announcements</li>
+                            <li><strong>Review Management:</strong> Encourage and respond to customer reviews</li>
+                            <li><strong>Local Keywords:</strong> Include city and region names in your profile</li>
+                        </ul>
+                        
+                        <h4>Local Citation Building:</h4>
+                        <ul>
+                            <li><strong>Consistent NAP:</strong> Ensure Name, Address, Phone number consistency across all platforms</li>
+                            <li><strong>Local Directories:</strong> List in Sri Lankan business directories</li>
+                            <li><strong>Industry-Specific Listings:</strong> Submit to relevant professional directories</li>
+                            <li><strong>Social Media Profiles:</strong> Optimize social profiles with local information</li>
+                        </ul>
+                        
+                        <h2>Content Marketing for SEO</h2>
+                        
+                        <h3>Content Types That Rank Well</h3>
+                        <ul>
+                            <li><strong>How-to Guides:</strong> Step-by-step instructional content</li>
+                            <li><strong>List Posts:</strong> "10 Best" or "Top 5" style articles</li>
+                            <li><strong>Case Studies:</strong> Real-world examples and success stories</li>
+                            <li><strong>Industry News:</strong> Commentary on latest trends and developments</li>
+                            <li><strong>FAQ Pages:</strong> Address common customer questions</li>
+                        </ul>
+                        
+                        <h3>Content Optimization Best Practices</h3>
+                        <ul>
+                            <li><strong>Featured Snippets:</strong> Structure content to win position zero</li>
+                            <li><strong>People Also Ask:</strong> Answer related questions in your content</li>
+                            <li><strong>Topic Clusters:</strong> Create comprehensive content hubs around main topics</li>
+                            <li><strong>Regular Updates:</strong> Keep content fresh and relevant</li>
+                        </ul>
+                        
+                        <h2>Measuring SEO Success</h2>
+                        
+                        <h3>Key SEO Metrics to Track</h3>
+                        <ul>
+                            <li><strong>Organic Traffic:</strong> Overall and page-specific organic visits</li>
+                            <li><strong>Keyword Rankings:</strong> Position changes for target keywords</li>
+                            <li><strong>Click-Through Rate:</strong> CTR from search results to your site</li>
+                            <li><strong>Bounce Rate:</strong> Percentage of single-page sessions</li>
+                            <li><strong>Core Web Vitals:</strong> Loading, interactivity, and visual stability</li>
+                            <li><strong>Backlink Profile:</strong> Quality and quantity of referring domains</li>
+                        </ul>
+                        
+                        <h3>Essential SEO Tools</h3>
+                        
+                        <h4>Free Tools:</h4>
+                        <ul>
+                            <li><strong>Google Search Console:</strong> Essential for any SEO campaign</li>
+                            <li><strong>Google Analytics:</strong> Track organic traffic and user behavior</li>
+                            <li><strong>Google PageSpeed Insights:</strong> Analyze and improve site speed</li>
+                            <li><strong>Google My Business:</strong> Local SEO management</li>
+                        </ul>
+                        
+                        <h4>Premium Tools:</h4>
+                        <ul>
+                            <li><strong>SEMrush:</strong> Comprehensive SEO and competitor analysis</li>
+                            <li><strong>Ahrefs:</strong> Excellent for backlink analysis and keyword research</li>
+                            <li><strong>Moz Pro:</strong> All-in-one SEO toolset</li>
+                            <li><strong>Screaming Frog:</strong> Technical SEO site auditing</li>
+                        </ul>
+                        
+                        <h2>Common SEO Mistakes to Avoid</h2>
+                        
+                        <ul>
+                            <li><strong>Keyword Stuffing:</strong> Overusing keywords unnaturally</li>
+                            <li><strong>Ignoring User Intent:</strong> Not matching content to search intent</li>
+                            <li><strong>Neglecting Mobile:</strong> Poor mobile user experience</li>
+                            <li><strong>Slow Loading Speeds:</strong> Not optimizing site performance</li>
+                            <li><strong>Duplicate Content:</strong> Having identical content on multiple pages</li>
+                            <li><strong>Neglecting Local SEO:</strong> Missing local optimization opportunities</li>
+                            <li><strong>Poor Internal Linking:</strong> Not connecting related content effectively</li>
+                        </ul>
+                        
+                        <h2>Advanced SEO Strategies</h2>
+                        
+                        <h3>Voice Search Optimization</h3>
+                        <p>With increasing voice search usage, optimize for conversational queries:</p>
+                        <ul>
+                            <li>Target long-tail, question-based keywords</li>
+                            <li>Create FAQ sections answering common questions</li>
+                            <li>Optimize for local voice searches</li>
+                            <li>Focus on featured snippet optimization</li>
+                        </ul>
+                        
+                        <h3>E-A-T Optimization</h3>
+                        <p>Google emphasizes Expertise, Authoritativeness, and Trustworthiness:</p>
+                        <ul>
+                            <li><strong>Author Bios:</strong> Showcase expertise with detailed author information</li>
+                            <li><strong>Credentials:</strong> Display relevant certifications and qualifications</li>
+                            <li><strong>Citations:</strong> Reference authoritative sources in your content</li>
+                            <li><strong>Reviews:</strong> Encourage and showcase positive customer feedback</li>
+                        </ul>
+                        
+                        <h2>SEO for Sri Lankan Businesses</h2>
+                        
+                        <h3>Local Market Considerations</h3>
+                        <ul>
+                            <li><strong>Language Preferences:</strong> Consider Sinhala and Tamil content for broader reach</li>
+                            <li><strong>Local Search Behavior:</strong> Understand how Sri Lankans search online</li>
+                            <li><strong>Mobile-First Approach:</strong> High mobile usage requires mobile optimization</li>
+                            <li><strong>Local Competitors:</strong> Analyze and outperform local competition</li>
+                        </ul>
+                        
+                        <h3>Industry-Specific SEO Tips</h3>
+                        
+                        <h4>For E-commerce:</h4>
+                        <ul>
+                            <li>Optimize product pages with detailed descriptions</li>
+                            <li>Use schema markup for products and reviews</li>
+                            <li>Create category and collection pages for long-tail keywords</li>
+                            <li>Implement user-generated content like reviews</li>
+                        </ul>
+                        
+                        <h4>For Service Businesses:</h4>
+                        <ul>
+                            <li>Create location-specific service pages</li>
+                            <li>Showcase customer testimonials and case studies</li>
+                            <li>Optimize for "near me" searches</li>
+                            <li>Maintain active Google My Business profile</li>
+                        </ul>
+                        
+                        <h2>30-Day SEO Action Plan Checklist</h2>
+                        
+                        <h3>Week 1 Tasks:</h3>
+                        <ul>
+                            <li>Complete SEO audit using Google Search Console</li>
+                            <li>Conduct comprehensive keyword research</li>
+                            <li>Analyze competitor SEO strategies</li>
+                            <li>Create content calendar based on keyword opportunities</li>
+                        </ul>
+                        
+                        <h3>Week 2 Tasks:</h3>
+                        <ul>
+                            <li>Optimize title tags and meta descriptions</li>
+                            <li>Improve header tag structure</li>
+                            <li>Enhance internal linking structure</li>
+                            <li>Update and optimize existing content</li>
+                        </ul>
+                        
+                        <h3>Week 3 Tasks:</h3>
+                        <ul>
+                            <li>Improve site speed and Core Web Vitals</li>
+                            <li>Ensure mobile optimization</li>
+                            <li>Fix technical SEO issues</li>
+                            <li>Implement schema markup</li>
+                        </ul>
+                        
+                        <h3>Week 4 Tasks:</h3>
+                        <ul>
+                            <li>Launch link building campaigns</li>
+                            <li>Optimize Google My Business profile</li>
+                            <li>Build local citations</li>
+                            <li>Monitor results and plan next steps</li>
+                        </ul>
+                        
+                        <h2>Partner with Infora Tech for SEO Success</h2>
+                        
+                        <p>Implementing a comprehensive SEO strategy requires time, expertise, and consistent effort. At Infora Tech, we've helped dozens of Sri Lankan businesses achieve first-page Google rankings and drive significant organic traffic growth.</p>
+                        
+                        <p><strong>Our SEO Services Include:</strong></p>
+                        <ul>
+                            <li>Complete SEO audits and strategy development</li>
+                            <li>Keyword research and competitive analysis</li>
+                            <li>On-page and technical SEO optimization</li>
+                            <li>Content creation and optimization</li>
+                            <li>Link building and authority development</li>
+                            <li>Local SEO and Google My Business optimization</li>
+                            <li>Ongoing monitoring and performance reporting</li>
+                        </ul>
+                        
+                        <p>Ready to dominate Google search results? Contact Infora Tech today for a free SEO consultation and discover how we can help your business rank higher, drive more traffic, and increase conversions through strategic search engine optimization.</p>
+                        
+                        <a href="blog.html" class="back-to-blog">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Blog
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html">
+                        <img src="images/Infora Tech Logo.png" alt="Infora Tech" class="footer-logo">
+                    </a>
+                    <p>We <strong>Infora Tech,</strong> Transform your digital presence with our expert web and app development services across the globe. Elevate your business with our innovative solutions. Let's collaborate and make your digital dreams come true!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="ai-development.html">AI Development</a></li>
+                        <li><a href="mobile-app-development.html">App Development</a></li>
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="hosting.html">Web Hosting & Domain Registration</a></li>
+                        <li><a href="ecommerce.html">Ecommerce website development</a></li>
+                        <li><a href="logo-design.html">Logo Design / Tracing</a></li>
+                        <li><a href="seo.html">Search Engine Optimization (SEO)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Who we are</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="pricing.html">Services</a></li>
+                        <li><a href="get-started.html">Contact us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Social</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <a href="index.html">Infora Tech</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
