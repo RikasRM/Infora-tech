@@ -1,0 +1,39 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://inforatech.lk/sitemap.xml
+
+# Allow all pages to be crawled
+Allow: /index.html
+Allow: /About-Us.html
+Allow: /Services.html
+Allow: /portfolio.html
+Allow: /blog.html
+Allow: /pricing.html
+Allow: /get-started.html
+
+# Allow service pages
+Allow: /ai-development.html
+Allow: /mobile-app-development.html
+Allow: /web-development.html
+Allow: /digital-marketing.html
+Allow: /seo-sem.html
+Allow: /graphics-design.html
+Allow: /video-editing.html
+
+# Allow blog posts
+Allow: /blog-ai-future.html
+Allow: /blog-mobile-first.html
+Allow: /blog-seo-guide.html
+Allow: /blog-page-2.html
+Allow: /create-images.html
+
+# Allow CSS, JS, and images
+Allow: /styles.css
+Allow: /script.js
+Allow: /get-started.js
+Allow: /images/
+
+# Crawl delay (optional - be respectful to server)
+Crawl-delay: 1 

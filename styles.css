@@ -2135,3 +2135,261 @@ textarea:focus {
         padding: 2rem 1.5rem;
     }
 }
+
+/* Privacy Policy Page Styles */
+.privacy-hero {
+    background: linear-gradient(135deg, #01295c 25%, #01295c 100%);
+    color: white;
+    padding: 180px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.privacy-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>') no-repeat center center;
+    opacity: 0.3;
+}
+
+.privacy-hero .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.privacy-hero .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.last-updated,
+.effective-date {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+}
+
+.privacy-content {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.toc-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+.toc-section h2 {
+    color: #01295c;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin-bottom: 0.75rem;
+}
+
+.toc-list a {
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
+    border-left: 3px solid transparent;
+    padding-left: 1rem;
+}
+
+.toc-list a:hover {
+    color: #01295c;
+    border-left-color: #01295c;
+    background: #f7fafc;
+    padding-left: 1.5rem;
+}
+
+.policy-sections {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.policy-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.policy-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.policy-section h2 {
+    color: #01295c;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.policy-section h3 {
+    color: #2d3748;
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 600;
+}
+
+.policy-section p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.policy-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.policy-section ul li {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.policy-section ul li strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.contact-info {
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    margin-bottom: 1rem;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Responsive Design for Privacy Policy */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .toc-section {
+        position: static;
+        order: 2;
+    }
+    
+    .policy-sections {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .privacy-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .privacy-hero .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .policy-sections {
+        padding: 2rem;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .policy-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-hero .hero-title {
+        font-size: 2rem;
+    }
+    
+    .policy-sections {
+        padding: 1.5rem;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .toc-section {
+        padding: 1.5rem;
+    }
+    
+    .contact-info {
+        padding: 1.5rem;
+    }
+}
