@@ -57,6 +57,92 @@
             line-height: 1.7;
         }
         
+        /* Team Section Styles */
+        .team-section {
+            padding: 120px 0;
+            background: #fafafa;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-image {
+            margin-bottom: 1.5rem;
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #01295c;
+        }
+
+        .team-info h3 {
+            font-size: 1.3rem;
+            color: #01295c;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .team-role {
+            color: #8b5cf6;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .team-description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .team-social .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #f8fafc;
+            color: #01295c;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .team-social .social-link:hover {
+            background: #01295c;
+            color: white;
+            transform: translateY(-2px);
+        }
+
         /* Enhanced Service Hero for About Page */
         .service-hero {
             background: linear-gradient(135deg, #01295c 0%, #4a088e 100%);
@@ -871,6 +957,68 @@
                 <h2>Ready to take your business to the next level with a professional website?</h2>
                 <p>Contact Infora Tech today to discuss your web development needs.</p>
                 <a href="get-started.html" class="cta-btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Expert Team</h2>
+            <p class="section-description">
+                Our talented team of developers, designers, and digital strategists are passionate about creating innovative solutions that drive business success.
+            </p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="images/team-member-1.jpg" alt="John Smith - Lead Developer" class="member-photo">
+                    </div>
+                    <div class="team-info">
+                        <h3>John Smith</h3>
+                        <p class="team-role">Lead Developer & Co-Founder</p>
+                        <p class="team-description">
+                            With over 8 years of experience in full-stack development, John leads our technical team in creating robust web and mobile applications.
+                        </p>
+                        <div class="team-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="images/team-member-2.jpg" alt="Sarah Johnson - UX/UI Designer" class="member-photo">
+                    </div>
+                    <div class="team-info">
+                        <h3>Sarah Johnson</h3>
+                        <p class="team-role">UX/UI Designer</p>
+                        <p class="team-description">
+                            Sarah brings creativity and user-centered design thinking to every project, ensuring our solutions are both beautiful and functional.
+                        </p>
+                        <div class="team-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="images/team-member-3.jpg" alt="Michael Chen - AI Specialist" class="member-photo">
+                    </div>
+                    <div class="team-info">
+                        <h3>Michael Chen</h3>
+                        <p class="team-role">AI Specialist & Data Scientist</p>
+                        <p class="team-description">
+                            Michael specializes in AI and machine learning solutions, helping businesses leverage intelligent automation and data insights.
+                        </p>
+                        <div class="team-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
