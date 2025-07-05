@@ -142,7 +142,7 @@ function initTestimonialSlider() {
             text: "Our mobile app turned out even better than we imagined. Infora Tech handled everything — from UI/UX to deployment — with precision. The app is stable, fast, and loved by our users!",
             author: "Dilani Fernando, Operations Manager,",
             role: "QuickFix.lk",
-            image: "images/clients_images/Dilani Fernando.jpg"
+            image: "images/clients_images/dilani.jpg"
         },
         {
             text: "Thanks to Infora Tech's SEO and marketing strategy, our website traffic has tripled in just a few months. We're finally ranking on Google and attracting quality leads. Highly recommended!",
@@ -154,13 +154,13 @@ function initTestimonialSlider() {
             text: "We needed eye-catching graphics and product videos for our campaign, and Infora Tech nailed it. Their creative team is top-notch and delivered visuals that truly captured our brand story.",
             author: "Sasha Wickramasinghe, Brand Manager,",
             role: "GlowBeauty SL",
-            image: "images/clients_images/Shasha.webp"
+            image: "images/clients_images/shasha.webp"
         },
         {
             text: "Working with Infora Tech was a game-changer. They're not just developers — they're strategic partners who genuinely care about your growth. We'll definitely keep coming back.",
             author: "Michael De Silva, CEO,",
             role: "Serene Spaces Interiors",
-            image: "images/clients_images/Silva.jpg"
+            image: "images/clients_images/silva.jpg"
         }
     ];
     
