@@ -526,6 +526,16 @@
             }
         }
     </style>
+    <!-- WhatsApp Chat Widget Pulse Animation -->
+    <style>
+        @keyframes wa-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        #whatsapp-chat-btn button {
+            animation: wa-pulse 1.5s infinite;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -780,14 +790,14 @@
                 
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p>Email: info@inforatech.io</p>
-                    <p>Phone: +94 75 223 1014</p>
+                    <p>Email: <a href="mailto:info@inforatech.io" style="color: #fff; text-decoration: none;">info@inforatech.io</a></p>
+                    <p>Phone: <a href="tel:+94752231014" style="color: #fff; text-decoration: none;">+94 75 223 1014</a></p>
                     <p>Address: Colombo, Sri Lanka</p>
                     <br><div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/16zccooWex/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B971554755996&text&type=phone_number&app_absent=0" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/fr-innovation-labs/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/infora_tech/profilecard/?igsh=MWFqb2p5MWFjbzN1ZQ==" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

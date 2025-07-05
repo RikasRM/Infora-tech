@@ -123,30 +123,101 @@ function initializeForm() {
         e.preventDefault();
         
         if (validateCurrentStep()) {
-            submitForm();
+            // Show loading state
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            submitForm().finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         }
     });
 }
 
 function submitForm() {
     // Collect form data
-    const formData = {
-        projectType: document.getElementById('project-type').value,
-        featuresLevel: document.getElementById('features-level').value,
-        projectDescription: document.getElementById('project-description').value,
-        fullName: document.getElementById('full-name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        company: document.getElementById('company').value,
-        estimatedPrice: document.getElementById('estimated-price').textContent,
-        estimatedDuration: document.getElementById('estimated-duration').textContent
-    };
+    const projectType = document.getElementById('project-type').value;
+    const featuresLevel = document.getElementById('features-level').value;
+    const projectDescription = document.getElementById('project-description').value;
+    const fullName = document.getElementById('full-name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const company = document.getElementById('company').value;
+    const estimatedPrice = document.getElementById('estimated-price').textContent;
+    const estimatedDuration = document.getElementById('estimated-duration').textContent;
     
-    // Here you would typically send the data to your server
-    console.log('Form submitted with data:', formData);
+    // Get current date and time
+    const now = new Date();
+    const dateTime = now.toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZoneName: 'short'
+    });
     
-    // Show success message
-    showSuccessMessage();
+    // Create WhatsApp message
+    const whatsappMessage = `🚀 *NEW PROJECT REQUEST - Infora Tech*
+📅 *Submitted:* ${dateTime}
+
+👤 *Client Details:*
+• Name: ${fullName}
+• Email: ${email}
+• Phone: ${phone || 'Not provided'}
+• Company: ${company || 'Not provided'}
+
+📋 *Project Details:*
+• Project Type: ${projectType}
+• Features Level: ${featuresLevel}
+• Estimated Price: ${estimatedPrice}
+• Estimated Duration: ${estimatedDuration}
+
+📝 *Project Description:*
+${projectDescription || 'No description provided'}
+
+---
+*Submitted via Infora Tech Website*
+*Reply to: ${email}*`;
+    
+    // Encode the message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/94752231014?text=${encodedMessage}`;
+    
+    // Open WhatsApp with the message
+    const whatsappWindow = window.open(whatsappURL, '_blank');
+    
+    // Check if WhatsApp opened successfully
+    if (whatsappWindow) {
+        // Show success message
+        showSuccessMessage();
+    } else {
+        // Fallback: Show WhatsApp link with copy option
+        const fallbackMessage = `Your form has been submitted! 
+
+To send the project details to our WhatsApp:
+1. Click this link: ${whatsappURL}
+2. Or copy this message and send it manually to +94 75 223 1014
+
+The message will be copied to your clipboard.`;
+        
+        // Copy message to clipboard
+        navigator.clipboard.writeText(whatsappMessage).then(() => {
+            alert(fallbackMessage);
+        }).catch(() => {
+            alert(fallbackMessage + '\n\nMessage:\n' + whatsappMessage);
+        });
+        
+        showSuccessMessage();
+    }
+    
+    // Return a resolved promise for consistency
+    return Promise.resolve();
 }
 
 function showSuccessMessage() {
@@ -154,14 +225,15 @@ function showSuccessMessage() {
     formContainer.innerHTML = `
         <div class="success-message">
             <div class="success-icon">
-                <i class="fas fa-check-circle"></i>
+                <i class="fab fa-whatsapp"></i>
             </div>
-            <h3>Thank You!</h3>
-            <p>Your project request has been submitted successfully. We'll get back to you within 24 hours with a detailed proposal.</p>
+            <h3>Form Submitted Successfully!</h3>
+            <p>Your project request has been sent to our WhatsApp. We'll review your requirements and get back to you shortly with a detailed proposal.</p>
             <div class="contact-info">
-                <p><strong>Need immediate assistance?</strong></p>
-                <p>Email: <a href="mailto:info@inforatech.io">info@inforatech.io</a></p>
-                <p>Phone: <a href="tel:+94752231014">+94 75 223 1014</a></p>
+                <p><strong>WhatsApp Message Sent!</strong></p>
+                <p>📱 Check your WhatsApp for the project details</p>
+                <p>📧 Email: <a href="mailto:info@inforatech.io">info@inforatech.io</a></p>
+                <p>📞 Phone: <a href="tel:+94752231014">+94 75 223 1014</a></p>
             </div>
             <a href="index.html" class="back-home-btn">Back to Home</a>
         </div>
@@ -181,7 +253,7 @@ const successMessageCSS = `
     
     .success-icon {
         font-size: 4rem;
-        color: #28a745;
+        color: #25D366;
         margin-bottom: 1rem;
     }
     

@@ -89,7 +89,8 @@
     </script>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Images/Infora Tech Logo.png">
+    <link rel="icon" type="image/jpeg" href="images/INFORA TECH Logo for Tite head.jpg">
+    <link rel="apple-touch-icon" href="images/INFORA TECH Logo for Tite head.jpg">
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -97,6 +98,17 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
+
+    <!-- WhatsApp Chat Widget Pulse Animation -->
+    <style>
+        @keyframes wa-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        #whatsapp-chat-btn button {
+            animation: wa-pulse 1.5s infinite;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -105,7 +117,7 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="index.html" title="Infora Tech Homepage">
-                        <img src="Images/Infora Tech Logo.png" alt="Infora Tech Logo" class="logo">
+                        <img src="images/Infora Tech Logo.png" alt="Infora Tech Logo" class="logo">
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -315,10 +327,10 @@
                             <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
                             <div class="contact-info">
                                 <div class="contact-item">
-                                    <strong>Email:</strong> privacy@inforatech.com
+                                    <strong>Email:</strong> <a href="mailto:privacy@inforatech.com" style="color: #fff; text-decoration: none;">privacy@inforatech.com</a>
                                 </div>
                                 <div class="contact-item">
-                                    <strong>Phone:</strong> +1 (555) 123-4567
+                                    <strong>Phone:</strong> <a href="tel:+94752231014" style="color: #fff; text-decoration: none;">+94 75 223 1014</a>
                                 </div>
                                 <div class="contact-item">
                                     <strong>Address:</strong> 123 Tech Street, Digital City, DC 12345, United States
@@ -354,22 +366,14 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="Images/Infora Tech Logo.png" alt="Infora Tech Logo" class="logo">
+                        <img src="images/Infora Tech Logo.png" alt="Infora Tech Logo" class="logo">
                         <p>Empowering businesses with innovative digital solutions. From web development to AI integration, we transform ideas into reality.</p>
                     </div>
                     <div class="social-links">
-                        <a href="#" title="Follow us on Facebook" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" title="Follow us on Twitter" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" title="Follow us on LinkedIn" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" title="Follow us on Instagram" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                        <a href="https://www.facebook.com/share/16zccooWex/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B971554755996&text&type=phone_number&app_absent=0" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/fr-innovation-labs/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/infora_tech/profilecard/?igsh=MWFqb2p5MWFjbzN1ZQ==" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
@@ -394,6 +398,7 @@
                         <li><a href="blog.html" title="Our Blog">Blog</a></li>
                         <li><a href="pricing.html" title="Pricing Plans">Pricing</a></li>
                         <li><a href="get-started.html" title="Contact Us">Contact</a></li>
+                        <li><a href="images/INFORA Tech Company Profile.pdf" title="fa-file-download">Download Our Company Profile</a></li>
                     </ul>
                 </div>
                 

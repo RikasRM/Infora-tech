@@ -692,6 +692,16 @@
             animation: pulse 2s infinite;
         }
     </style>
+    <!-- WhatsApp Chat Widget Pulse Animation -->
+    <style>
+    @keyframes wa-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+#whatsapp-chat-btn button {
+  animation: wa-pulse 1.5s infinite;
+}
+</style>
 </head>
 <body>
     <!-- Navigation -->
@@ -751,7 +761,7 @@
                     <!-- Featured Article -->
                     <article class="featured-article">
                         <div class="featured-badge">Featured</div>
-                        <img src="https://via.placeholder.com/800x350/01295c/ffffff?text=Future+of+AI+in+Web+Development" alt="Future of AI in Web Development" class="article-image">
+                        <img src="images/ai-future-blog.jpg" alt="Future of AI in Web Development" class="article-image">
                         <div class="article-content">
                             <div class="article-meta">
                                 <span class="article-category">AI Development</span>
@@ -779,7 +789,7 @@
                     <div class="blog-posts">
                         <!-- Post 1 -->
                         <article class="blog-post">
-                            <img src="https://via.placeholder.com/400x200/4a088e/ffffff?text=Mobile+First+Design" alt="Mobile-First Design Strategies" class="post-image">
+                            <img src="images/mobile-first-blog.jpg" alt="Mobile-First Design Strategies" class="post-image">
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="article-category">Web Development</span>
@@ -801,7 +811,7 @@
 
                         <!-- Post 2 -->
                         <article class="blog-post">
-                            <img src="https://via.placeholder.com/400x200/8b5cf6/ffffff?text=E-commerce+Trends" alt="E-commerce Development Trends" class="post-image">
+                            <img src="images/web-performance-blog.jpg" alt="E-commerce Development Trends" class="post-image">
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="article-category">E-commerce</span>
@@ -823,7 +833,7 @@
 
                         <!-- Post 3 -->
                         <article class="blog-post">
-                            <img src="https://via.placeholder.com/400x200/10b981/ffffff?text=SEO+Optimization" alt="SEO Optimization Guide" class="post-image">
+                            <img src="images/seo-guide-blog.jpg" alt="SEO Optimization Guide" class="post-image">
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="article-category">Digital Marketing</span>
@@ -845,7 +855,7 @@
 
                         <!-- Post 4 -->
                         <article class="blog-post">
-                            <img src="https://via.placeholder.com/400x200/01295c/ffffff?text=Web+Performance" alt="Website Performance Optimization" class="post-image">
+                            <img src="images/web-performance-blog.jpg" alt="Website Performance Optimization" class="post-image">
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="article-category">Performance</span>
@@ -867,7 +877,7 @@
 
                         <!-- Post 5 -->
                         <article class="blog-post">
-                            <img src="https://via.placeholder.com/400x200/dc2626/ffffff?text=Social+Media+Marketing" alt="Social Media Marketing" class="post-image">
+                            <img src="images/social-media-blog.jpg" alt="Social Media Marketing" class="post-image">
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="article-category">Social Media</span>
@@ -889,7 +899,7 @@
 
                         <!-- Post 6 -->
                         <article class="blog-post">
-                            <img src="https://via.placeholder.com/400x200/f59e0b/ffffff?text=Business+Growth" alt="Digital Transformation" class="post-image">
+                            <img src="images/digital-transformation-blog.jpg" alt="Digital Transformation" class="post-image">
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="article-category">Business Growth</span>
@@ -961,28 +971,28 @@
                         <h3 class="widget-title">Recent Posts</h3>
                         <ul class="recent-posts-list">
                             <li class="recent-post-item">
-                                <img src="https://via.placeholder.com/60x60/8b5cf6/ffffff?text=AI" alt="AI Tools" class="recent-post-image">
+                                <img src="images/ai-future-blog.jpg" alt="AI Tools" class="recent-post-image">
                                 <div class="recent-post-content">
                                     <h4><a href="blog-ai-future.html">The Future of AI in Web Development</a></h4>
                                     <span class="recent-post-date">December 15, 2024</span>
                                 </div>
                             </li>
                             <li class="recent-post-item">
-                                <img src="https://via.placeholder.com/60x60/10b981/ffffff?text=UX" alt="UX Design" class="recent-post-image">
+                                <img src="images/mobile-first-blog.jpg" alt="UX Design" class="recent-post-image">
                                 <div class="recent-post-content">
                                     <h4><a href="blog-mobile-first.html">Mobile-First Design for 2024</a></h4>
                                     <span class="recent-post-date">December 10, 2024</span>
                                 </div>
                             </li>
                             <li class="recent-post-item">
-                                <img src="https://via.placeholder.com/60x60/dc2626/ffffff?text=PPC" alt="PPC Advertising" class="recent-post-image">
+                                <img src="images/google-ads-blog.jpg" alt="PPC Advertising" class="recent-post-image">
                                 <div class="recent-post-content">
                                     <h4><a href="blog-seo-guide.html">Complete SEO Guide for 2024</a></h4>
                                     <span class="recent-post-date">December 5, 2024</span>
                                 </div>
                             </li>
                             <li class="recent-post-item">
-                                <img src="https://via.placeholder.com/60x60/f59e0b/ffffff?text=WP" alt="WordPress Tips" class="recent-post-image">
+                                <img src="images/wordpress-security-blog.jpg" alt="WordPress Tips" class="recent-post-image">
                                 <div class="recent-post-content">
                                     <h4><a href="blog-page-2.html">More Web Development Tips</a></h4>
                                     <span class="recent-post-date">December 3, 2024</span>
@@ -1062,19 +1072,20 @@
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="get-started.html">Contact Us</a></li>
+                        <li><a href="images/INFORA Tech Company Profile.pdf" title="fa-file-download">Download Our Company Profile</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p>Email: info@inforatech.io</p>
-                    <p>Phone: +94 75 223 1014</p>
+                    <p>Email: <a href="mailto:info@inforatech.io">info@inforatech.io</a></p>
+                    <p>Phone: <a href="tel:+94752231014">+94 75 223 1014</a></p>
                     <p>Address: Colombo, Sri Lanka</p>
                     <br><div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/16zccooWex/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B971554755996&text&type=phone_number&app_absent=0" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/fr-innovation-labs/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/infora_tech/profilecard/?igsh=MWFqb2p5MWFjbzN1ZQ==" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -1133,5 +1144,82 @@
             });
         });
     </script>
+    <!-- WhatsApp Chat Widget -->
+    <div id="whatsapp-chat-btn" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
+        <button onclick="toggleWhatsAppChat()" style="background: #25D366; border: none; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <i class="fab fa-whatsapp" style="color: white; font-size: 2.2rem;"></i>
+        </button>
+    </div>
+    <div id="whatsapp-chat-popup" style="display: none; position: fixed; bottom: 100px; right: 30px; width: 340px; background: #fff; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.18); z-index: 10000; overflow: hidden; font-family: 'Inter', Arial, sans-serif;">
+        <div style="background: #075e54; color: #fff; padding: 18px 18px 12px 18px; display: flex; align-items: center; gap: 12px;">
+            <img src="images/Infora Tech Logo.png" alt="Infora Tech Logo" style="width: 44px; height: 44px; border-radius: 50%; background: #fff; object-fit: cover; border: 2px solid #25D366; display: block;">
+            <div>
+                <div style="font-weight: 700; font-size: 1.1rem;">Infora Tech</div>
+                <div style="font-size: 0.95rem; opacity: 0.85;">Typically replies within 1 hour</div>
+            </div>
+            <button onclick="toggleWhatsAppChat()" style="margin-left:auto; background: none; border: none; color: #fff; font-size: 1.3rem; cursor: pointer; opacity: 0.7;">&times;</button>
+        </div>
+        <div style="background: #ece5dd; padding: 18px 18px 0 18px; min-height: 80px;">
+            <div style="background: #fff; border-radius: 8px; padding: 12px 16px; font-size: 1.05rem; color: #222; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); max-width: 80%;">
+                Hello there! This is Fazee, From Infora Tech.<br>How we can help?<div style="font-size: 0.85rem; color: #888; margin-top: 4px; text-align: right;">Now</div>
+            </div>
+        </div>
+        <form id="whatsapp-chat-form" style="display: flex; align-items: center; padding: 12px 18px 18px 18px; background: #ece5dd; border-top: 1px solid #ddd; gap: 8px;">
+            <input id="whatsapp-chat-input" type="text" placeholder="Type a message..." style="flex: 1; border-radius: 20px; border: 1px solid #ccc; padding: 10px 16px; font-size: 1rem; outline: none;">
+            <button type="submit" style="background: #25D366; border: none; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                <i class="fas fa-paper-plane" style="color: white; font-size: 1.2rem;"></i>
+            </button>
+        </form>
+    </div>
+    <script>
+    function toggleWhatsAppChat() {
+        var popup = document.getElementById('whatsapp-chat-popup');
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    document.getElementById('whatsapp-chat-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var msg = document.getElementById('whatsapp-chat-input').value.trim();
+        if (!msg) return;
+        var url = 'https://wa.me/94752231014?text=' + encodeURIComponent(msg);
+        window.open(url, '_blank');
+        document.getElementById('whatsapp-chat-input').value = '';
+        toggleWhatsAppChat();
+    });
+    </script>
+    <!-- End WhatsApp Chat Widget -->
+    <!-- WhatsApp Chat Widget (WhatsApp web style) -->
+<script>
+(function() {
+  var style = document.createElement('style');
+  style.innerHTML = `
+    #whatsapp-chat-popup .wa-message-bubble {
+      font-size: 14px !important;
+      padding: 12px 18px !important;
+      margin-bottom: 20px !important;
+      line-height: 1.6 !important;
+      word-break: break-word;
+      max-width: 80% !important;
+      background: #fff !important;
+      color: #222 !important;
+      border-radius: 8px !important;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03) !important;
+    }
+    #whatsapp-chat-popup form {
+      margin-top: 10px !important;
+    }
+  `;
+  document.head.appendChild(style);
+})();
+</script>
+<script>
+// Patch the message bubble class for the widget
+var waMsgBubble = document.querySelector('#whatsapp-chat-popup > div:nth-child(2) > div');
+if (waMsgBubble) waMsgBubble.classList.add('wa-message-bubble');
+</script>
+<!-- Update the chat message to two lines -->
+<script>
+var waMsgBubble = document.querySelector('#whatsapp-chat-popup > div:nth-child(2) > div');
+if (waMsgBubble) waMsgBubble.innerHTML = 'Hello there! This is Fazee, From Infora Tech.<br>How we can help?<div style="font-size: 0.85rem; color: #888; margin-top: 4px; text-align: right;">Now</div>';
+</script>
 </body>
 </html>

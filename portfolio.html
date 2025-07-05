@@ -61,6 +61,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/INFORA TECH Logo for Tite head.jpg">
+    <link rel="apple-touch-icon" href="images/INFORA TECH Logo for Tite head.jpg">
+    
     <!-- Structured Data for Portfolio Page -->
     <script type="application/ld+json">
     {
@@ -692,6 +696,16 @@
             }
         }
     </style>
+    <!-- WhatsApp Chat Widget Pulse Animation -->
+    <style>
+        @keyframes wa-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        #whatsapp-chat-btn button {
+            animation: wa-pulse 1.5s infinite;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -735,12 +749,18 @@
         <div class="container">
             <h1>Our Portfolio</h1>
             <p>Discover our innovative solutions and successful projects that showcase our expertise in technology and digital transformation.</p>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="images/INFORA Tech Company Profile.pdf" download class="cta-btn" style="display: inline-block; background: linear-gradient(135deg, #01295c 0%, #4a088e 100%); color: #fff; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 16px rgba(1,41,92,0.10); transition: background 0.3s;">
+                    <i class="fas fa-file-download" style="margin-right: 8px;"></i>Download Company Profile
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Portfolio Filters -->
     <section class="portfolio-section">
         <div class="container">
+            <h1 class="section-title" style="text-align: center;">Our Portfolio</h1>
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="web">Web Development</button>
@@ -966,21 +986,30 @@
                     <div class="testimonial-text">
                         "Infora Tech delivered an exceptional e-commerce platform that exceeded our expectations. Their attention to detail and innovative approach helped us increase sales by 300%."
                     </div>
-                    <div class="testimonial-author">Sarah Johnson</div>
+                    <div class="testimonial-author">
+                        <img src="images/clients_images/Silva.jpg" alt="Sarah Johnson" class="author-avatar">
+                        Sarah Johnson
+                    </div>
                     <div class="testimonial-company">CEO, TechShop</div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text">
                         "The mobile app they developed for our banking services is incredibly secure and user-friendly. Our customers love the seamless experience."
                     </div>
-                    <div class="testimonial-author">Michael Chen</div>
+                    <div class="testimonial-author">
+                        <img src="images/clients_images/riyas.webp" alt="Michael Chen" class="author-avatar">
+                        Michael Chen
+                    </div>
                     <div class="testimonial-company">CTO, SecureBank</div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text">
                         "Their AI-powered analytics dashboard transformed how we make business decisions. The predictive insights have been invaluable for our growth."
                     </div>
-                    <div class="testimonial-author">Emily Rodriguez</div>
+                    <div class="testimonial-author">
+                        <img src="images/clients_images/Dilani Fernando.jpg" alt="Emily Rodriguez" class="author-avatar">
+                        Emily Rodriguez
+                    </div>
                     <div class="testimonial-company">Data Director, GrowthCorp</div>
                 </div>
             </div>
@@ -1032,19 +1061,20 @@
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="get-started.html">Contact Us</a></li>
+                        <li><a href="images/INFORA Tech Company Profile.pdf" title="fa-file-download">Download Our Company Profile</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p>Email: info@inforatech.io</p>
-                    <p>Phone: +94 75 223 1014</p>
+                    <p>Email: <a href="mailto:info@inforatech.io" style="color: #fff; text-decoration: none;">info@inforatech.io</a></p>
+                    <p>Phone: <a href="tel:+94752231014" style="color: #fff; text-decoration: none;">+94 75 223 1014</a></p>
                     <p>Address: Colombo, Sri Lanka</p>
                     <br><div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/16zccooWex/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B971554755996&text&type=phone_number&app_absent=0" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/fr-innovation-labs/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/infora_tech/profilecard/?igsh=MWFqb2p5MWFjbzN1ZQ==" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
