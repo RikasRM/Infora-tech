@@ -80,10 +80,23 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 0.5rem 0;
     margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
     display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Add a small delay before hiding the dropdown */
+.dropdown:not(:hover) .dropdown-content {
+    transition-delay: 0.2s;
 }
 
 .dropdown-content a {
@@ -95,6 +108,18 @@ body {
     font-size: 0.9rem;
     transition: all 0.3s ease;
     border-radius: 0;
+    position: relative;
+}
+
+/* Add a small invisible area above the dropdown to prevent it from disappearing */
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: transparent;
 }
 
 .dropdown-content a:hover {
@@ -732,6 +757,8 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .service-hero-title {
@@ -749,11 +776,21 @@ body {
     line-height: 1.7;
 }
 
+.service-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-img {
     width: 100%;
-    height: auto;
+    max-width: 500px;
+    height: 400px;
     border-radius: 16px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
 }
 
 .service-details {
@@ -1263,6 +1300,7 @@ body {
 
     .hero-img {
         margin-top: 2rem;
+        max-width: 400px;
     }
 
     .service-hero {
@@ -1318,6 +1356,10 @@ body {
 
     .social-links {
         justify-content: center;
+    }
+    
+    .hero-img {
+        max-width: 300px;
     }
 }
 
@@ -2391,5 +2433,133 @@ textarea:focus {
     
     .contact-info {
         padding: 1.5rem;
+    }
+}
+
+/* Global Presence Section Styles */
+.global-presence-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.country-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.country-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #01295c 0%, #01295c 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.country-card:hover::before {
+    transform: scaleX(1);
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.country-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #01295c 0%, #01295c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.country-card h3 {
+    color: #01295c;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.country-card p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.country-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.country-card ul li {
+    color: #01295c;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.country-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #01295c;
+    font-weight: bold;
+}
+
+.country-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design for Global Presence Section */
+@media (max-width: 768px) {
+    .countries-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .country-card {
+        padding: 1.5rem;
+    }
+    
+    .country-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .global-presence-section {
+        padding: 60px 0;
+    }
+    
+    .country-card {
+        padding: 1.25rem;
+    }
+    
+    .country-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
     }
 }
